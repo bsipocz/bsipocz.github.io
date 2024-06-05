@@ -1,0 +1,1633 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>astroquery &#8212; Scientific Python Developer Statistics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_generated/astroquery/index';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Scientific Python Developer Statistics</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/scientific-python/devstats.scientific-python.org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scientific-python.org" title="Scientific Python" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/scientific-python-logo.png" class="icon-link-image" alt="Scientific Python"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/scientific-python/devstats.scientific-python.org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scientific-python.org" title="Scientific Python" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/scientific-python-logo.png" class="icon-link-image" alt="Scientific Python"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="astroquery">
+<h1><code class="docutils literal notranslate"><span class="pre">astroquery</span></code><a class="headerlink" href="#astroquery" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For interactive plots</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">TeX</span>
+<span class="n">output_notebook</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">    <style>
+        .bk-notebook-logo {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAOkSURBVDiNjZRtaJVlGMd/1/08zzln5zjP1LWcU9N0NkN8m2CYjpgQYQXqSs0I84OLIC0hkEKoPtiH3gmKoiJDU7QpLgoLjLIQCpEsNJ1vqUOdO7ppbuec5+V+rj4ctwzd8IIbbi6u+8f1539dt3A78eXC7QizUF7gyV1fD1Yqg4JWz84yffhm0qkFqBogB9rM8tZdtwVsPUhWhGcFJngGeWrPzHm5oaMmkfEg1usvLFyc8jLRqDOMru7AyC8saQr7GG7f5fvDeH7Ej8CM66nIF+8yngt6HWaKh7k49Soy9nXurCi1o3qUbS3zWfrYeQDTB/Qj6kX6Ybhw4B+bOYoLKCC9H3Nu/leUTZ1JdRWkkn2ldcCamzrcf47KKXdAJllSlxAOkRgyHsGC/zRday5Qld9DyoM4/q/rUoy/CXh3jzOu3bHUVZeU+DEn8FInkPBFlu3+nW3Nw0mk6vCDiWg8CeJaxEwuHS3+z5RgY+YBR6V1Z1nxSOfoaPa4LASWxxdNp+VWTk7+4vzaou8v8PN+xo+KY2xsw6une2frhw05CTYOmQvsEhjhWjn0bmXPjpE1+kplmmkP3suftwTubK9Vq22qKmrBhpY4jvd5afdRA3wGjFAgcnTK2s4hY0/GPNIb0nErGMCRxWOOX64Z8RAC4oCXdklmEvcL8o0BfkNK4lUg9HTl+oPlQxdNo3Mg4Nv175e/1LDGzZen30MEjRUtmXSfiTVu1kK8W4txyV6BMKlbgk3lMwYCiusNy9fVfvvwMxv8Ynl6vxoByANLTWplvuj/nF9m2+PDtt1eiHPBr1oIfhCChQMBw6Aw0UulqTKZdfVvfG7VcfIqLG9bcldL/+pdWTLxLUy8Qq38heUIjh4XlzZxzQm19lLFlr8vdQ97rjZVOLf8nclzckbcD4wxXMidpX30sFd37Fv/GtwwhzhxGVAprjbg0gCAEeIgwCZyTV2Z1REEW8O4py0wsjeloKoMr6iCY6dP92H6Vw/oTyICIthibxjm/DfN9lVz8IqtqKYLUXfoKVMVQVVJOElGjrnnUt9T9wbgp8AyYKaGlqingHZU/uG2NTZSVqwHQTWkx9hxjkpWDaCg6Ckj5qebgBVbT3V3NNXMSiWSDdGV3hrtzla7J+duwPOToIg42ChPQOQjspnSlp1V+Gjdged7+8UN5CRAV7a5EdFNwCjEaBR27b3W890TE7g24NAP/mMDXRWrGoFPQI9ls/MWO2dWFAar/xcOIImbbpA3zgAAAABJRU5ErkJggg==);
+        }
+    </style>
+    <div>
+        <a href="https://bokeh.org" target="_blank" class="bk-notebook-logo"></a>
+        <span id="e2501c3b-f8e2-4386-9dc0-342e57f03180">Loading BokehJS ...</span>
+    </div>
+</div><script type="application/javascript">'use strict';
+(function(root) {
+  function now() {
+    return new Date();
+  }
+
+  const force = true;
+
+  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
+    root._bokeh_onload_callbacks = [];
+    root._bokeh_is_loading = undefined;
+  }
+
+const JS_MIME_TYPE = 'application/javascript';
+  const HTML_MIME_TYPE = 'text/html';
+  const EXEC_MIME_TYPE = 'application/vnd.bokehjs_exec.v0+json';
+  const CLASS_NAME = 'output_bokeh rendered_html';
+
+  /**
+   * Render data to the DOM node
+   */
+  function render(props, node) {
+    const script = document.createElement("script");
+    node.appendChild(script);
+  }
+
+  /**
+   * Handle when an output is cleared or removed
+   */
+  function handleClearOutput(event, handle) {
+    function drop(id) {
+      const view = Bokeh.index.get_by_id(id)
+      if (view != null) {
+        view.model.document.clear()
+        Bokeh.index.delete(view)
+      }
+    }
+
+    const cell = handle.cell;
+
+    const id = cell.output_area._bokeh_element_id;
+    const server_id = cell.output_area._bokeh_server_id;
+
+    // Clean up Bokeh references
+    if (id != null) {
+      drop(id)
+    }
+
+    if (server_id !== undefined) {
+      // Clean up Bokeh references
+      const cmd_clean = "from bokeh.io.state import curstate; print(curstate().uuid_to_server['" + server_id + "'].get_sessions()[0].document.roots[0]._id)";
+      cell.notebook.kernel.execute(cmd_clean, {
+        iopub: {
+          output: function(msg) {
+            const id = msg.content.text.trim()
+            drop(id)
+          }
+        }
+      });
+      // Destroy server and session
+      const cmd_destroy = "import bokeh.io.notebook as ion; ion.destroy_server('" + server_id + "')";
+      cell.notebook.kernel.execute(cmd_destroy);
+    }
+  }
+
+  /**
+   * Handle when a new output is added
+   */
+  function handleAddOutput(event, handle) {
+    const output_area = handle.output_area;
+    const output = handle.output;
+
+    // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
+    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+      return
+    }
+
+    const toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+
+    if (output.metadata[EXEC_MIME_TYPE]["id"] !== undefined) {
+      toinsert[toinsert.length - 1].firstChild.textContent = output.data[JS_MIME_TYPE];
+      // store reference to embed id on output_area
+      output_area._bokeh_element_id = output.metadata[EXEC_MIME_TYPE]["id"];
+    }
+    if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+      const bk_div = document.createElement("div");
+      bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+      const script_attrs = bk_div.children[0].attributes;
+      for (let i = 0; i < script_attrs.length; i++) {
+        toinsert[toinsert.length - 1].firstChild.setAttribute(script_attrs[i].name, script_attrs[i].value);
+        toinsert[toinsert.length - 1].firstChild.textContent = bk_div.children[0].textContent
+      }
+      // store reference to server id on output_area
+      output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+    }
+  }
+
+  function register_renderer(events, OutputArea) {
+
+    function append_mime(data, metadata, element) {
+      // create a DOM node to render to
+      const toinsert = this.create_output_subarea(
+        metadata,
+        CLASS_NAME,
+        EXEC_MIME_TYPE
+      );
+      this.keyboard_manager.register_events(toinsert);
+      // Render to node
+      const props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+      render(props, toinsert[toinsert.length - 1]);
+      element.append(toinsert);
+      return toinsert
+    }
+
+    /* Handle when an output is cleared or removed */
+    events.on('clear_output.CodeCell', handleClearOutput);
+    events.on('delete.Cell', handleClearOutput);
+
+    /* Handle when a new output is added */
+    events.on('output_added.OutputArea', handleAddOutput);
+
+    /**
+     * Register the mime type and append_mime function with output_area
+     */
+    OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+      /* Is output safe? */
+      safe: true,
+      /* Index of renderer in `output_area.display_order` */
+      index: 0
+    });
+  }
+
+  // register the mime type if in Jupyter Notebook environment and previously unregistered
+  if (root.Jupyter !== undefined) {
+    const events = require('base/js/events');
+    const OutputArea = require('notebook/js/outputarea').OutputArea;
+
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  }
+  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
+
+  const NB_LOAD_WARNING = {'data': {'text/html':
+     "<div style='background-color: #fdd'>\n"+
+     "<p>\n"+
+     "BokehJS does not appear to have successfully loaded. If loading BokehJS from CDN, this \n"+
+     "may be due to a slow or bad network connection. Possible fixes:\n"+
+     "</p>\n"+
+     "<ul>\n"+
+     "<li>re-rerun `output_notebook()` to attempt to load from CDN again, or</li>\n"+
+     "<li>use INLINE resources instead, as so:</li>\n"+
+     "</ul>\n"+
+     "<code>\n"+
+     "from bokeh.resources import INLINE\n"+
+     "output_notebook(resources=INLINE)\n"+
+     "</code>\n"+
+     "</div>"}};
+
+  function display_loaded(error = null) {
+    const el = document.getElementById("e2501c3b-f8e2-4386-9dc0-342e57f03180");
+    if (el != null) {
+      const html = (() => {
+        if (typeof root.Bokeh === "undefined") {
+          if (error == null) {
+            return "BokehJS is loading ...";
+          } else {
+            return "BokehJS failed to load.";
+          }
+        } else {
+          const prefix = `BokehJS ${root.Bokeh.version}`;
+          if (error == null) {
+            return `${prefix} successfully loaded.`;
+          } else {
+            return `${prefix} <b>encountered errors</b> while loading and may not function as expected.`;
+          }
+        }
+      })();
+      el.innerHTML = html;
+
+      if (error != null) {
+        const wrapper = document.createElement("div");
+        wrapper.style.overflow = "auto";
+        wrapper.style.height = "5em";
+        wrapper.style.resize = "vertical";
+        const content = document.createElement("div");
+        content.style.fontFamily = "monospace";
+        content.style.whiteSpace = "pre-wrap";
+        content.style.backgroundColor = "rgb(255, 221, 221)";
+        content.textContent = error.stack ?? error.toString();
+        wrapper.append(content);
+        el.append(wrapper);
+      }
+    } else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(() => display_loaded(error), 100);
+    }
+  }
+
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
+
+  function load_libs(css_urls, js_urls, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+
+    root._bokeh_onload_callbacks.push(callback);
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls == null || js_urls.length === 0) {
+      run_callbacks();
+      return null;
+    }
+    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    root._bokeh_is_loading = css_urls.length + js_urls.length;
+
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+
+    function on_error(url) {
+      console.error("failed to load " + url);
+    }
+
+    for (let i = 0; i < css_urls.length; i++) {
+      const url = css_urls[i];
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }
+
+    for (let i = 0; i < js_urls.length; i++) {
+      const url = js_urls[i];
+      const element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error.bind(null, url);
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  const js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.4.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.4.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.4.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.4.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.4.1.min.js"];
+  const css_urls = [];
+
+  const inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {
+    }
+  ];
+
+  function run_inline_js() {
+    if (root.Bokeh !== undefined || force === true) {
+      try {
+            for (let i = 0; i < inline_js.length; i++) {
+      inline_js[i].call(root, root.Bokeh);
+    }
+
+      } catch (error) {display_loaded(error);throw error;
+      }if (force === true) {
+        display_loaded();
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    } else if (force !== true) {
+      const cell = $(document.getElementById("e2501c3b-f8e2-4386-9dc0-342e57f03180")).parents('.cell').data().cell;
+      cell.output_area.append_execute_result(NB_LOAD_WARNING)
+    }
+  }
+
+  if (root._bokeh_is_loading === 0) {
+    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
+    run_inline_js();
+  } else {
+    load_libs(css_urls, js_urls, function() {
+      console.debug("Bokeh: BokehJS plotting callback run at", now());
+      run_inline_js();
+    });
+  }
+}(window));</script></div>
+</div>
+<p>A snapshot of the development on the astroquery project.</p>
+<section id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query_date</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">&quot;2020-01-01 00:00:00&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load data</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;devstats-data/astroquery_issues.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+    <span class="n">issues</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">())]</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;devstats-data/astroquery_query_date&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">query_date</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;M8[D]&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="new-issues">
+<h3>New issues<a class="headerlink" href="#new-issues" title="Link to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newly_created</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">iss</span> <span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">issues</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">iss</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">query_date</span>
+<span class="p">]</span>
+<span class="n">new_issues_closed</span> <span class="o">=</span> <span class="p">[</span><span class="n">iss</span> <span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">newly_created</span> <span class="k">if</span> <span class="n">iss</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CLOSED&quot;</span><span class="p">]</span>
+
+<span class="n">new_issue_lifetime</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">iss</span><span class="p">[</span><span class="s2">&quot;closedAt&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">iss</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">new_issues_closed</span>
+    <span class="p">],</span>
+<span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;m8[h]&quot;</span><span class="p">)</span>  <span class="c1"># in hours</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_num_new_issues&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">newly_created</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_num_new_issues_closed&quot;</span><span class="p">,</span> <span class="n">percent_val</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">new_issues_closed</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">newly_created</span><span class="p">)))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_new_issue_median_lifetime&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">new_issue_lifetime</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p><span class="pasted-text">682</span> new issues have been opened since
+<span class="pasted-text">2020-01-01</span>, of which <span class="pasted-text">466 (68%)</span> have been
+closed.</p>
+<p>The median lifetime of new issues that were created and closed in this period
+is <span class="pasted-text">632 hours</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query_date</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s2">&quot;2020-01-01 00:00:00&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load data</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;devstats-data/astroquery_issues.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+    <span class="n">issues</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">())]</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_query_date&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">query_date</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;M8[D]&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Lifetime of issues created and closed in the last &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">query_date</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;m8[D]&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+<span class="n">h</span><span class="p">,</span> <span class="n">bedges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span>
+    <span class="n">new_issue_lifetime</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;m8[D]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">670</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+    <span class="n">tooltips</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;lifetime&quot;</span><span class="p">,</span> <span class="s2">&quot;@right days&quot;</span><span class="p">),</span> <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;# issues&quot;</span><span class="p">,</span> <span class="s2">&quot;@top&quot;</span><span class="p">)],</span>
+<span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="n">h</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">bedges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">right</span><span class="o">=</span><span class="n">bedges</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;Issue lifetime (days)&quot;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;# Issues&quot;</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="d72f09e4-d692-4512-a073-9a57347292fa" data-root-id="p1001" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"b6674735-7627-46f4-9637-1b39270e98e6":{"version":"3.4.1","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1001","attributes":{"width":670,"height":400,"x_range":{"type":"object","name":"DataRange1d","id":"p1002"},"y_range":{"type":"object","name":"DataRange1d","id":"p1003"},"x_scale":{"type":"object","name":"LinearScale","id":"p1011"},"y_scale":{"type":"object","name":"LinearScale","id":"p1012"},"title":{"type":"object","name":"Title","id":"p1004","attributes":{"text":"Lifetime of issues created and closed in the last 1616 days"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1041","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1035","attributes":{"selected":{"type":"object","name":"Selection","id":"p1036","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1037"},"data":{"type":"map","entries":[["top",{"type":"ndarray","array":{"type":"bytes","data":"awAAABwAAAAPAAAABwAAAAsAAAAGAAAACgAAAAQAAAAMAAAABQAAAAcAAAABAAAAAwAAAAEAAAABAAAAAwAAAAEAAAADAAAAAQAAAAAAAAABAAAAAgAAAAEAAAABAAAAAAAAAAEAAAACAAAAAgAAAAIAAAA="},"shape":[29],"dtype":"int32","order":"little"}],["left",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAcAAAAIAAAACQAAAAoAAAALAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAAEgAAABMAAAAUAAAAFQAAABYAAAAXAAAAGAAAABkAAAAaAAAAGwAAABwAAAA="},"shape":[29],"dtype":"int32","order":"little"}],["right",{"type":"ndarray","array":{"type":"bytes","data":"AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAAEAAAABEAAAASAAAAEwAAABQAAAAVAAAAFgAAABcAAAAYAAAAGQAAABoAAAAbAAAAHAAAAB0AAAA="},"shape":[29],"dtype":"int32","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1042","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1043"}}},"glyph":{"type":"object","name":"Quad","id":"p1038","attributes":{"left":{"type":"field","field":"left"},"right":{"type":"field","field":"right"},"bottom":{"type":"value","value":0},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"fill_color":{"type":"value","value":"#1f77b4"}}},"nonselection_glyph":{"type":"object","name":"Quad","id":"p1039","attributes":{"left":{"type":"field","field":"left"},"right":{"type":"field","field":"right"},"bottom":{"type":"value","value":0},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Quad","id":"p1040","attributes":{"left":{"type":"field","field":"left"},"right":{"type":"field","field":"right"},"bottom":{"type":"value","value":0},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1010","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1023"},{"type":"object","name":"WheelZoomTool","id":"p1024","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1025","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1026","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1031"},{"type":"object","name":"ResetTool","id":"p1032"},{"type":"object","name":"HelpTool","id":"p1033"},{"type":"object","name":"HoverTool","id":"p1034","attributes":{"renderers":"auto","tooltips":[["lifetime","@right days"],["# issues","@top"]]}}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1018","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1019","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1020"},"axis_label":"# Issues","major_label_policy":{"type":"object","name":"AllLabels","id":"p1021"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1013","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1014","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1015"},"axis_label":"Issue lifetime (days)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1016"}}}],"center":[{"type":"object","name":"Grid","id":"p1017","attributes":{"axis":{"id":"p1013"}}},{"type":"object","name":"Grid","id":"p1022","attributes":{"dimension":1,"axis":{"id":"p1018"}}}]}}]}};
+  const render_items = [{"docid":"b6674735-7627-46f4-9637-1b39270e98e6","roots":{"p1001":"d72f09e4-d692-4512-a073-9a57347292fa"},"root_ids":["p1001"]}];
+  void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+<section id="time-to-response">
+<h4>Time to response<a class="headerlink" href="#time-to-response" title="Link to this heading">#</a></h4>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove issues that are less than a day old for the following analysis</span>
+<span class="n">newly_created_day_old</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">iss</span> <span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">newly_created</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">iss</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span>
+    <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># TODO: really need pandas here</span>
+<span class="n">commented_issues</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">iss</span> <span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">newly_created_day_old</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span>
+        <span class="n">e</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">][</span><span class="s2">&quot;__typename&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;IssueComment&quot;</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">iss</span><span class="p">[</span><span class="s2">&quot;timelineItems&quot;</span><span class="p">][</span><span class="s2">&quot;edges&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+<span class="n">first_commenters</span><span class="p">,</span> <span class="n">time_to_first_comment</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">commented_issues</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">iss</span><span class="p">[</span><span class="s2">&quot;timelineItems&quot;</span><span class="p">][</span><span class="s2">&quot;edges&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">][</span><span class="s2">&quot;__typename&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;IssueComment&quot;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">][</span><span class="s2">&quot;author&quot;</span><span class="p">][</span><span class="s2">&quot;login&quot;</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="c1"># This can happen e.g. when a user deletes their GH acct</span>
+                <span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;UNKNOWN&quot;</span>
+            <span class="n">first_commenters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+            <span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">][</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="n">iss</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span>
+            <span class="n">time_to_first_comment</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;m8[m]&quot;</span><span class="p">))</span>
+            <span class="k">break</span>  <span class="c1"># Only want the first commenter</span>
+<span class="n">time_to_first_comment</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">time_to_first_comment</span><span class="p">)</span>  <span class="c1"># in minutes</span>
+
+<span class="n">median_time_til_first_response</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">time_to_first_comment</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">/</span> <span class="mi">60</span><span class="p">)</span>
+
+<span class="n">cutoffs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">),</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+<span class="n">num_issues_commented_by_cutoff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">time_to_first_comment</span> <span class="o">&lt;</span> <span class="n">cutoff</span><span class="p">)</span> <span class="k">for</span> <span class="n">cutoff</span> <span class="ow">in</span> <span class="n">cutoffs</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># TODO: Update IssueComment query to include:</span>
+<span class="c1">#  - whether the commenter is a maintainer</span>
+<span class="c1">#  - datetime of comment</span>
+<span class="c1"># This will allow analysis of what fraction of issues are addressed by</span>
+<span class="c1"># maintainers vs. non-maintainer, and the distribution of how long an issue</span>
+<span class="c1"># usually sits before it&#39;s at least commented on</span>
+
+<span class="n">glue</span><span class="p">(</span>
+    <span class="s2">&quot;astroquery_num_new_issues_responded&quot;</span><span class="p">,</span>
+    <span class="n">percent_val</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">commented_issues</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">newly_created_day_old</span><span class="p">))</span>
+<span class="p">)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_new_issues_at_least_1_day_old&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">newly_created_day_old</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_median_response_time&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">median_time_til_first_response</span><span class="si">:</span><span class="s2">1.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Of the <span class="pasted-text">681</span> issues that are at least 24
+hours old, <span class="pasted-text">560 (82%)</span> of them have been commented
+on.
+The median time until an issue is first responded to is
+<span class="pasted-text">4</span> hours.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.transform</span> <span class="kn">import</span> <span class="n">dodge</span>
+
+<span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Percentage of issues opened since </span><span class="si">{</span><span class="n">query_date</span><span class="si">}</span><span class="s2"> that are commented on within...&quot;</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cutoffs</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">num_issues_commented_by_cutoff</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">newly_created_day_old</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span>
+    <span class="n">x_range</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
+    <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">670</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+    <span class="n">tooltips</span><span class="o">=</span><span class="p">[(</span><span class="sa">r</span><span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="s2">&quot;@top&quot;</span><span class="p">)],</span>
+<span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">vbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;Time interval&quot;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;Percentage of issues commented on within interval&quot;</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="d5f62a97-b729-416a-aa02-9f8fed9634e2" data-root-id="p1047" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"390880bb-668c-4d18-b143-3d8344a6b495":{"version":"3.4.1","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1047","attributes":{"width":670,"height":400,"x_range":{"type":"object","name":"FactorRange","id":"p1057","attributes":{"factors":["1 hours","12 hours","24 hours","3 days","7 days","14 days"]}},"y_range":{"type":"object","name":"Range1d","id":"p1058","attributes":{"end":100}},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1059"},"y_scale":{"type":"object","name":"LinearScale","id":"p1060"},"title":{"type":"object","name":"Title","id":"p1050","attributes":{"text":"Percentage of issues opened since 2020-01-01T00:00:00 that are commented on within..."}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1089","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1083","attributes":{"selected":{"type":"object","name":"Selection","id":"p1084","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1085"},"data":{"type":"map","entries":[["x",["1 hours","12 hours","24 hours","3 days","7 days","14 days"]],["top",{"type":"ndarray","array":{"type":"bytes","data":"1u+yhAcMPEBK3MbX8upJQFnCAwZw5ktAncelb39lTkAYwJmPsh1QQIajBQmo2VBA"},"shape":[6],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1090","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1091"}}},"glyph":{"type":"object","name":"VBar","id":"p1086","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.8},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"fill_color":{"type":"value","value":"#1f77b4"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1087","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.8},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1088","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.8},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1056","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1071"},{"type":"object","name":"WheelZoomTool","id":"p1072","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1073","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1074","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1079"},{"type":"object","name":"ResetTool","id":"p1080"},{"type":"object","name":"HelpTool","id":"p1081"},{"type":"object","name":"HoverTool","id":"p1082","attributes":{"renderers":"auto","tooltips":[["%","@top"]]}}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1066","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1067","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1068"},"axis_label":"Percentage of issues commented on within interval","major_label_policy":{"type":"object","name":"AllLabels","id":"p1069"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1061","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1062"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1063"},"axis_label":"Time interval","major_label_policy":{"type":"object","name":"AllLabels","id":"p1064"}}}],"center":[{"type":"object","name":"Grid","id":"p1065","attributes":{"axis":{"id":"p1061"}}},{"type":"object","name":"Grid","id":"p1070","attributes":{"dimension":1,"axis":{"id":"p1066"}}}]}}]}};
+  const render_items = [{"docid":"390880bb-668c-4d18-b143-3d8344a6b495","roots":{"p1047":"d5f62a97-b729-416a-aa02-9f8fed9634e2"},"root_ids":["p1047"]}];
+  void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+<section id="first-responders">
+<h4>First responders<a class="headerlink" href="#first-responders" title="Link to this heading">#</a></h4>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_commenter_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="n">k</span><span class="p">:</span> <span class="n">v</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+            <span class="p">(</span><span class="s2">&quot;Contributor&quot;</span><span class="p">,</span> <span class="s2">&quot;# of times commented first&quot;</span><span class="p">),</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">first_commenters</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">first_commenter_tab</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+    <span class="s2">&quot;# of times commented first&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Contributor</th>
+      <th># of times commented first</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>27</th>
+      <td>bsipocz</td>
+      <td>239</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>keflavich</td>
+      <td>148</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>pllim</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>eerovaher</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>andamian</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ManonMarchand</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>ceb8</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>jespinosaar</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>github-actions</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>jaymedina</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+<section id="pull-requests">
+<h2>Pull Requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;devstats-data/astroquery_prs.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+    <span class="n">prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">())]</span>
+
+<span class="c1"># Filters</span>
+
+<span class="c1"># The following filters are applied to the PRs for the following analysis:</span>
+<span class="c1">#</span>
+<span class="c1"># - Only PRs to the default development branch (e.g `main`)[^master_to_main]</span>
+<span class="c1">#  are considered.</span>
+<span class="c1"># - Only PRs from users with _active_ GitHub accounts are considered. For example,</span>
+<span class="c1">#   if a user opened a Pull Request in 2016, but then deleted their GitHub account</span>
+<span class="c1">#   in 2017, then this PR is excluded from the analysis.</span>
+<span class="c1"># - PRs opened by dependabot are excluded.</span>
+
+<span class="c1"># Only look at PRs to the main development branch - ignore backports,</span>
+<span class="c1"># gh-pages, etc.</span>
+<span class="n">default_branches</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;main&quot;</span><span class="p">,</span> <span class="s2">&quot;master&quot;</span><span class="p">}</span>  <span class="c1"># Account for default branch update</span>
+<span class="n">prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;baseRefName&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">default_branches</span><span class="p">]</span>
+
+<span class="c1"># Drop data where PR author is unknown (e.g. github account no longer exists)</span>
+<span class="n">prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;author&quot;</span><span class="p">]]</span>  <span class="c1"># Failed author query results in None</span>
+
+<span class="c1"># Filter out PRs by bots</span>
+<span class="n">bot_filter</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;dependabot-preview&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;github-actions&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;meeseeksmachine&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;pre-commit-ci[bot]&quot;</span>
+<span class="p">}</span>
+<span class="n">prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;author&quot;</span><span class="p">][</span><span class="s2">&quot;login&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bot_filter</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section id="merged-prs-over-time">
+<h3>Merged PRs over time<a class="headerlink" href="#merged-prs-over-time" title="Link to this heading">#</a></h3>
+<p>A look at merged PRs over time.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># All contributors</span>
+<span class="n">merged_prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;MERGED&#39;</span><span class="p">]</span>
+<span class="n">merge_dates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;mergedAt&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">merged_prs</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">)</span>
+<span class="n">binsize</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">)</span>
+<span class="n">date_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">merge_dates</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">merge_dates</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">binsize</span><span class="p">)</span>
+<span class="n">h_all</span><span class="p">,</span> <span class="n">bedges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">merge_dates</span><span class="p">,</span> <span class="n">date_bins</span><span class="p">)</span>
+<span class="n">bcenters</span> <span class="o">=</span> <span class="n">bedges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">binsize</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">smoothing_interval</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># in units of bin-width</span>
+
+<span class="c1"># First-time contributors</span>
+<span class="n">first_time_contributor</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">prev_contrib</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">merged_prs</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">author</span> <span class="o">=</span> <span class="n">record</span><span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">][</span><span class="s1">&#39;login&#39;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># Author no longer has GitHub account</span>
+        <span class="n">first_time_contributor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">author</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">prev_contrib</span><span class="p">:</span>
+        <span class="n">first_time_contributor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">prev_contrib</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">first_time_contributor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># Object dtype for handling None</span>
+<span class="n">first_time_contributor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">first_time_contributor</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="c1"># Focus on first time contributors</span>
+<span class="n">ftc_mask</span> <span class="o">=</span> <span class="n">first_time_contributor</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="n">ftc_dates</span> <span class="o">=</span> <span class="n">merge_dates</span><span class="p">[</span><span class="n">ftc_mask</span><span class="p">]</span>
+
+<span class="n">h_ftc</span><span class="p">,</span> <span class="n">bedges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">ftc_dates</span><span class="p">,</span> <span class="n">date_bins</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">whom</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="p">(</span><span class="n">h_all</span><span class="p">,</span> <span class="n">h_ftc</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;all contributors&quot;</span><span class="p">,</span> <span class="s2">&quot;first-time contributors&quot;</span><span class="p">)</span>
+<span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">bcenters</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">binsize</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Raw&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">bcenters</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">smoothing_interval</span><span class="p">),</span> <span class="s1">&#39;same&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">smoothing_interval</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">binsize</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">smoothing_interval</span><span class="si">}</span><span class="s2"> moving average&quot;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:orange&#39;</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">whom</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Merged PRs from:&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;# Merged PRs / </span><span class="si">{</span><span class="n">binsize</span><span class="si">}</span><span class="s1"> interval&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">())</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+
+<span class="c1"># TODO: Replace this with `glue` once the glue:figure directive supports</span>
+<span class="c1"># alt-text</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;thumbs&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;thumbs/astroquery.png&quot;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/01c01fe86ee368d3213be18e030b160c116f8b1eefdda6ff481f2ef06f116ab3.png" src="../../_images/01c01fe86ee368d3213be18e030b160c116f8b1eefdda6ff481f2ef06f116ab3.png" />
+</div>
+</div>
+</section>
+<section id="pr-lifetime">
+<h3>PR lifetime<a class="headerlink" href="#pr-lifetime" title="Link to this heading">#</a></h3>
+<p>The following plot shows the “survival” of PRs over time.
+That means, the plot shows how many PRs are open for at least these many days.
+This is seperated into PRs that are merged and those that are still open
+(closed but unmerged PRs are not included currently).</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged_prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;MERGED&#39;</span><span class="p">]</span>
+<span class="n">lifetimes_merged</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;mergedAt&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">merged_prs</span><span class="p">],</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;m8[m]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="s2">&quot;int64&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>  <span class="c1"># days</span>
+<span class="n">lifetimes_merged</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1">#closed_prs = [pr for pr in prs if pr[&#39;state&#39;] == &#39;CLOSED&#39;]</span>
+<span class="c1">#lifetimes_closed = np.array(</span>
+<span class="c1">#    [isoparse(pr[&quot;mergedAt&quot;]) - isoparse(pr[&quot;createdAt&quot;]) for pr in closed_prs],</span>
+<span class="c1">#    dtype=&quot;m8[m]&quot;).view(&quot;int64&quot;) / (60 * 24)  # days</span>
+<span class="c1">#lifetimes_closed.sort()</span>
+
+
+<span class="c1"># Use the newest issue to guess a time when the data was generated.</span>
+<span class="c1"># Can this logic be improved?</span>
+<span class="n">current_time</span> <span class="o">=</span> <span class="n">isoparse</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">iss</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">iss</span> <span class="ow">in</span> <span class="n">issues</span><span class="p">))</span>
+
+<span class="n">open_prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s1">&#39;state&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;OPEN&#39;</span><span class="p">]</span>
+<span class="n">age_open</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">current_time</span> <span class="o">-</span> <span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">open_prs</span><span class="p">],</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;m8[m]&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="s2">&quot;int64&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">)</span>  <span class="c1"># days</span>
+<span class="n">age_open</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">number_merged</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lifetimes_merged</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">lifetimes_merged</span><span class="p">,</span> <span class="n">number_merged</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Merged&quot;</span><span class="p">)</span>
+
+<span class="c1">#ax.step(lifetimes_closed, np.arange(1, len(lifetimes_closed)+1)[::-1])</span>
+
+<span class="n">number_open</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">age_open</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">age_open</span><span class="p">,</span> <span class="n">number_open</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Open&quot;</span><span class="p">)</span>
+
+<span class="c1"># Find the first point where closed have a bigger survival than open PRs:</span>
+<span class="n">all_lifetimes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">lifetimes_merged</span><span class="p">,</span> <span class="n">age_open</span><span class="p">])</span>
+<span class="n">all_lifetimes</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="n">number_merged_all_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">all_lifetimes</span><span class="p">,</span> <span class="n">lifetimes_merged</span><span class="p">,</span> <span class="n">number_merged</span><span class="p">)</span>
+<span class="n">number_open_all_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">all_lifetimes</span><span class="p">,</span> <span class="n">age_open</span><span class="p">,</span> <span class="n">number_open</span><span class="p">)</span>
+
+<span class="n">first_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">number_merged_all_t</span> <span class="o">&lt;</span> <span class="n">number_open_all_t</span><span class="p">)</span>
+<span class="n">first_time</span> <span class="o">=</span> <span class="n">all_lifetimes</span><span class="p">[</span><span class="n">first_idx</span><span class="p">]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">first_time</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis_transform</span><span class="p">(),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">first_time</span><span class="p">)</span><span class="si">}</span><span class="s2"> days&quot;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">first_time</span><span class="p">,</span> <span class="n">number_open_all_t</span><span class="p">[</span><span class="n">first_idx</span><span class="p">]),</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span>
+    <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time until merged or time open [days]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;# of PRs open this long or longer&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/b7c49ee72d802ac471e3b8af95d6129cd1ee78cc23e79777dfdda7f829ee137d.png" src="../../_images/b7c49ee72d802ac471e3b8af95d6129cd1ee78cc23e79777dfdda7f829ee137d.png" />
+</div>
+</div>
+</section>
+<section id="mergeability-of-open-prs">
+<h3>Mergeability of Open PRs<a class="headerlink" href="#mergeability-of-open-prs" title="Link to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">open_prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">pr</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;OPEN&quot;</span><span class="p">]</span>
+
+<span class="c1"># The GraphQL query does not reliably return information on PR mergeability.</span>
+<span class="c1"># Warn if there are problems</span>
+<span class="k">if</span> <span class="nb">any</span><span class="p">([</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;mergeable&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;UNKNOWN&quot;</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">open_prs</span><span class="p">]):</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">The data contains PRs with unknown merge status.</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;Please re-download the data to get accurate info about PR mergeability.&quot;</span>
+        <span class="p">),</span>
+        <span class="ne">UserWarning</span><span class="p">,</span>
+        <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="n">conflicting_prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">open_prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;mergeable&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CONFLICTING&quot;</span><span class="p">]</span>
+<span class="n">mergeable_prs</span> <span class="o">=</span> <span class="p">[</span><span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">open_prs</span> <span class="k">if</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;mergeable&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;MERGEABLE&quot;</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">conflicting_prs</span><span class="p">,</span> <span class="n">mergeable_prs</span><span class="p">],</span>
+    <span class="n">bins</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+    <span class="n">histtype</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;conflicting&quot;</span><span class="p">,</span> <span class="s2">&quot;mergeable&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;tab:red&quot;</span><span class="p">,</span> <span class="s2">&quot;tab:blue&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Date of PR creation&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;# of conflicting PRs&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/bsipocz/.pyenv/versions/3.12.1/lib/python3.12/site-packages/IPython/core/interactiveshell.py:3577: UserWarning: 
+
+The data contains PRs with unknown merge status.
+Please re-download the data to get accurate info about PR mergeability.
+  exec(code_obj, self.user_global_ns, self.user_ns)
+</pre></div>
+</div>
+<img alt="../../_images/32c7087727c7c724d87a708eb7bd07a1ee8864196b02556f80b0627073d2c1e1.png" src="../../_images/32c7087727c7c724d87a708eb7bd07a1ee8864196b02556f80b0627073d2c1e1.png" />
+</div>
+</div>
+</section>
+<section id="number-of-pr-participants">
+<h3>Number of PR participants<a class="headerlink" href="#number-of-pr-participants" title="Link to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the lifetimes and number of participants for merged PRs</span>
+<span class="n">lifetimes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;mergedAt&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="n">isoparse</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;createdAt&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">merged_prs</span><span class="p">],</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;m8[h]&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">num_participants</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;participants&quot;</span><span class="p">][</span><span class="s2">&quot;totalCount&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">merged_prs</span><span class="p">])</span>
+
+<span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Distribution of lifetimes for merged PRs based on the number of participants&quot;</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xgrid</span><span class="o">.</span><span class="n">grid_line_color</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">ticker</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">num_participants</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;PR lifetime (hours)&quot;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">num_participants</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">lifetimes</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="c6446ed0-22e2-4f7c-99a8-08a90af7a7fd" data-root-id="p1093" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"72e31986-b409-4f23-ae62-0c19766695d6":{"version":"3.4.1","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1093","attributes":{"height":300,"x_range":{"type":"object","name":"DataRange1d","id":"p1094"},"y_range":{"type":"object","name":"DataRange1d","id":"p1095"},"x_scale":{"type":"object","name":"LinearScale","id":"p1103"},"y_scale":{"type":"object","name":"LinearScale","id":"p1104"},"title":{"type":"object","name":"Title","id":"p1096","attributes":{"text":"Distribution of lifetimes for merged PRs based on the number of participants"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1133","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1127","attributes":{"selected":{"type":"object","name":"Selection","id":"p1128","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1129"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"AQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAQAAAAMAAAABAAAAAgAAAAIAAAAEAAAABAAAAAEAAAABAAAAAQAAAAQAAAABAAAAAQAAAAIAAAABAAAAAQAAAAMAAAACAAAAAQAAAAIAAAACAAAAAwAAAAIAAAACAAAAAQAAAAIAAAACAAAAAgAAAAEAAAAEAAAAAwAAAAIAAAAEAAAAAwAAAAIAAAACAAAAAwAAAAIAAAADAAAAAwAAAAIAAAACAAAAAgAAAAIAAAACAAAAAQAAAAEAAAABAAAAAQAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAEAAAACAAAABAAAAAMAAAADAAAAAgAAAAUAAAACAAAAAgAAAAQAAAADAAAAAgAAAAIAAAADAAAAAgAAAAMAAAACAAAAAQAAAAIAAAABAAAAAgAAAAIAAAACAAAAAgAAAAEAAAACAAAAAgAAAAMAAAACAAAAAQAAAAEAAAACAAAAAQAAAAMAAAABAAAAAgAAAAEAAAACAAAAAgAAAAIAAAACAAAAAgAAAAMAAAABAAAAAQAAAAEAAAACAAAAAQAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAQAAAAEAAAABAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAQAAAAIAAAABAAAAAgAAAAIAAAABAAAAAQAAAAEAAAABAAAAAwAAAAEAAAACAAAAAgAAAAEAAAADAAAAAQAAAAEAAAABAAAAAgAAAAIAAAABAAAAAwAAAAEAAAACAAAAAQAAAAEAAAADAAAAAQAAAAIAAAACAAAAAgAAAAIAAAACAAAAAQAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAwAAAAIAAAADAAAAAgAAAAIAAAACAAAAAwAAAAEAAAABAAAAAwAAAAEAAAADAAAAAgAAAAIAAAADAAAAAwAAAAIAAAABAAAAAgAAAAIAAAACAAAAAwAAAAMAAAAEAAAAAgAAAAIAAAACAAAAAgAAAAEAAAAEAAAAAgAAAAEAAAAFAAAAAQAAAAEAAAAFAAAAAgAAAAEAAAACAAAAAgAAAAEAAAABAAAAAgAAAAMAAAABAAAAAQAAAAEAAAACAAAAAQAAAAEAAAADAAAAAgAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAIAAAACAAAAAQAAAAIAAAACAAAAAgAAAAIAAAACAAAABQAAAAEAAAACAAAAAwAAAAMAAAAFAAAAAwAAAAIAAAACAAAAAgAAAAIAAAABAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAEAAAADAAAAAgAAAAEAAAABAAAAAgAAAAIAAAABAAAAAgAAAAIAAAACAAAAAQAAAAEAAAACAAAAAwAAAAIAAAACAAAAAQAAAAEAAAABAAAAAQAAAAEAAAADAAAAAwAAAAIAAAACAAAAAQAAAAMAAAACAAAAAgAAAAEAAAABAAAAAwAAAAMAAAACAAAAAgAAAAEAAAACAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAAAQAAAAMAAAACAAAAAwAAAAIAAAACAAAAAwAAAAIAAAAEAAAAAgAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAABAAAAAMAAAAEAAAAAwAAAAMAAAADAAAABAAAAAMAAAACAAAAAwAAAAMAAAADAAAAAgAAAAIAAAACAAAAAQAAAAIAAAACAAAAAgAAAAYAAAACAAAAAwAAAAMAAAADAAAAAwAAAAQAAAAGAAAAAgAAAAIAAAADAAAAAgAAAAMAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAQAAAAIAAAABAAAAAQAAAAMAAAADAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAABAAAAAwAAAAQAAAACAAAABAAAAAIAAAACAAAAAgAAAAIAAAADAAAAAwAAAAIAAAABAAAAAQAAAAIAAAABAAAAAgAAAAMAAAABAAAAAQAAAAEAAAACAAAAAgAAAAIAAAABAAAAAgAAAAMAAAABAAAAAQAAAAEAAAADAAAAAwAAAAMAAAACAAAAAQAAAAMAAAABAAAAAgAAAAEAAAACAAAAAgAAAAIAAAABAAAAAgAAAAIAAAABAAAAAgAAAAIAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAABAAAAAMAAAABAAAAAgAAAAIAAAABAAAAAgAAAAIAAAADAAAAAgAAAAIAAAADAAAAAwAAAAEAAAABAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAIAAAADAAAAAwAAAAMAAAACAAAAAgAAAAMAAAADAAAAAgAAAAMAAAADAAAAAwAAAAMAAAACAAAAAgAAAAMAAAAHAAAAAwAAAAMAAAADAAAAAgAAAAIAAAABAAAAAwAAAAIAAAADAAAAAwAAAAIAAAACAAAAAQAAAAEAAAACAAAAAgAAAAIAAAACAAAAAgAAAAEAAAABAAAAAgAAAAEAAAADAAAAAgAAAAIAAAABAAAAAQAAAAIAAAABAAAAAgAAAAIAAAACAAAAAgAAAAIAAAABAAAAAQAAAAIAAAACAAAAAQAAAAEAAAACAAAAAQAAAAIAAAACAAAAAwAAAAMAAAADAAAAAgAAAAMAAAABAAAAAgAAAAMAAAADAAAAAgAAAAMAAAABAAAABAAAAAEAAAACAAAAAgAAAAMAAAABAAAAAQAAAAMAAAACAAAAAQAAAAIAAAADAAAAAgAAAAMAAAACAAAAAwAAAAIAAAADAAAAAQAAAAEAAAADAAAAAgAAAAMAAAACAAAAAgAAAAEAAAABAAAABAAAAAEAAAAFAAAAAwAAAAEAAAACAAAAAgAAAAIAAAACAAAAAgAAAAEAAAAEAAAABQAAAAEAAAABAAAAAQAAAAEAAAAFAAAAAQAAAAIAAAABAAAAAQAAAAIAAAADAAAAAgAAAAQAAAABAAAABAAAAAQAAAADAAAAAwAAAAUAAAAFAAAABAAAAAEAAAADAAAABAAAAAIAAAADAAAAAwAAAAIAAAADAAAABQAAAAMAAAACAAAAAgAAAAIAAAACAAAAAwAAAAQAAAACAAAAAwAAAAEAAAABAAAAAwAAAAMAAAAEAAAAAwAAAAMAAAAFAAAAAgAAAAIAAAABAAAAAwAAAAIAAAACAAAAAgAAAAIAAAADAAAABwAAAAIAAAAEAAAABAAAAAQAAAACAAAABAAAAAUAAAABAAAAAwAAAAQAAAACAAAABQAAAAUAAAAFAAAABAAAAAQAAAADAAAABAAAAAQAAAAEAAAAAgAAAAMAAAADAAAAAwAAAAMAAAACAAAABAAAAAMAAAAEAAAAAgAAAAEAAAAEAAAAAwAAAAQAAAADAAAABQAAAAMAAAADAAAAAgAAAAQAAAACAAAAAQAAAAIAAAAEAAAABQAAAAQAAAADAAAAAwAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAQAAAAEAAAABQAAAAIAAAACAAAAAgAAAAQAAAAFAAAAAQAAAAEAAAACAAAAAwAAAAUAAAACAAAACAAAAAIAAAACAAAAAwAAAAMAAAADAAAAAgAAAAMAAAADAAAAAwAAAAQAAAADAAAAAgAAAAYAAAACAAAAAgAAAAcAAAACAAAAAQAAAAIAAAADAAAABAAAAAMAAAAEAAAAAwAAAAIAAAADAAAAAgAAAAMAAAAGAAAABgAAAAQAAAAEAAAABwAAAAUAAAADAAAAAwAAAAIAAAAEAAAAAwAAAAQAAAAEAAAAAwAAAAMAAAABAAAABAAAAAYAAAABAAAABAAAAAQAAAAEAAAAAwAAAAMAAAACAAAABAAAAAQAAAADAAAAAgAAAAMAAAAEAAAABAAAAAMAAAACAAAAAgAAAAMAAAABAAAAAwAAAAMAAAADAAAABgAAAAIAAAADAAAAAwAAAAMAAAACAAAAAwAAAAYAAAACAAAABAAAAAQAAAACAAAAAgAAAAMAAAADAAAABAAAAAEAAAADAAAAAwAAAAQAAAADAAAABQAAAAIAAAABAAAAAgAAAAMAAAABAAAAAgAAAAEAAAACAAAAAwAAAAIAAAADAAAAAwAAAAMAAAADAAAAAgAAAAQAAAADAAAAAgAAAAUAAAABAAAAAQAAAAQAAAADAAAAAgAAAAUAAAAFAAAAAgAAAAIAAAABAAAAAwAAAAMAAAABAAAABQAAAAMAAAADAAAABgAAAAMAAAADAAAAAgAAAAMAAAADAAAABAAAAAQAAAADAAAAAQAAAAEAAAACAAAAAQAAAAEAAAACAAAAAgAAAAQAAAACAAAAAQAAAAEAAAACAAAABAAAAAIAAAABAAAABQAAAAMAAAACAAAAAgAAAAQAAAADAAAAAwAAAAIAAAABAAAAAgAAAAEAAAACAAAAAwAAAAMAAAABAAAABAAAAAQAAAACAAAAAwAAAAIAAAAFAAAAAQAAAAcAAAAEAAAABAAAAAMAAAACAAAAAwAAAAEAAAAGAAAABAAAAAEAAAACAAAAAgAAAAUAAAAEAAAAAwAAAAIAAAADAAAAAwAAAAMAAAAEAAAAAwAAAAIAAAACAAAAAwAAAAIAAAACAAAAAgAAAAMAAAAFAAAAAgAAAAIAAAADAAAABAAAAAUAAAACAAAAAgAAAAEAAAACAAAAAwAAAAUAAAAEAAAABAAAAAMAAAADAAAAAwAAAAQAAAADAAAABAAAAAYAAAACAAAAAgAAAAIAAAAHAAAABQAAAAIAAAABAAAAAgAAAAEAAAABAAAAAwAAAAQAAAADAAAAAwAAAAMAAAAEAAAAAwAAAAQAAAABAAAACAAAAAMAAAACAAAABAAAAAIAAAAEAAAAAQAAAAIAAAAEAAAAAgAAAAMAAAADAAAAAwAAAAIAAAAEAAAAAwAAAAMAAAAEAAAAAgAAAAIAAAACAAAABQAAAAUAAAADAAAAAwAAAAMAAAAEAAAABAAAAAIAAAACAAAAAwAAAAIAAAACAAAAAgAAAAIAAAAEAAAAAgAAAAMAAAACAAAAAgAAAAIAAAAEAAAABAAAAAMAAAAEAAAABQAAAAIAAAADAAAAAwAAAAIAAAACAAAAAgAAAAMAAAACAAAAAwAAAAEAAAAEAAAAAgAAAAIAAAACAAAAAgAAAAIAAAADAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAQAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAQAAAAEAAAABAAAAAMAAAADAAAABAAAAAMAAAADAAAAAgAAAAIAAAABAAAAAgAAAAUAAAADAAAABQAAAAIAAAACAAAABAAAAAMAAAAEAAAAAgAAAAUAAAADAAAABQAAAAQAAAAEAAAAAwAAAAMAAAADAAAAAQAAAAMAAAADAAAABgAAAAIAAAACAAAAAgAAAAcAAAAEAAAAAgAAAAMAAAACAAAABQAAAAMAAAABAAAAAwAAAAIAAAAHAAAAAgAAAAEAAAABAAAAAgAAAAQAAAABAAAAAwAAAAEAAAABAAAAAgAAAAUAAAAEAAAAAwAAAAIAAAABAAAABAAAAAMAAAADAAAABwAAAAMAAAACAAAAAgAAAAQAAAADAAAAAgAAAAMAAAAEAAAAAwAAAAIAAAADAAAAAwAAAAIAAAADAAAABAAAAAEAAAADAAAABAAAAAQAAAACAAAAAwAAAAEAAAACAAAAAgAAAAgAAAAEAAAAAQAAAAEAAAACAAAAAgAAAAIAAAAGAAAAAgAAAAIAAAACAAAABAAAAAEAAAADAAAAAQAAAAEAAAACAAAAAgAAAAIAAAACAAAAAgAAAAMAAAADAAAAAwAAAAQAAAAEAAAABQAAAAMAAAACAAAAAgAAAAUAAAACAAAABAAAAAMAAAAFAAAAAwAAAAMAAAADAAAAAgAAAAIAAAADAAAABAAAAAMAAAADAAAABQAAAAIAAAACAAAAAwAAAAMAAAACAAAAAwAAAAEAAAADAAAAAQAAAAIAAAACAAAAAgAAAAQAAAAEAAAABQAAAAIAAAACAAAAAQAAAAMAAAADAAAAAgAAAAIAAAABAAAAAgAAAAIAAAABAAAABAAAAAIAAAADAAAABQAAAAIAAAAEAAAAAwAAAAEAAAACAAAABQAAAAMAAAACAAAAAgAAAAIAAAACAAAAAwAAAAMAAAAEAAAAAgAAAAEAAAACAAAAAgAAAAIAAAABAAAAAgAAAAIAAAABAAAAAQAAAAMAAAABAAAAAwAAAAIAAAABAAAAAQAAAAEAAAACAAAAAwAAAAIAAAABAAAAAgAAAAIAAAACAAAAAgAAAAQAAAACAAAAAQAAAAIAAAADAAAAAgAAAAQAAAAFAAAAAwAAAAIAAAAEAAAABgAAAAUAAAADAAAABQAAAAEAAAAFAAAABAAAAAIAAAAGAAAAAwAAAAQAAAADAAAAAwAAAAIAAAAEAAAAAgAAAAEAAAABAAAAAQAAAAEAAAAFAAAAAgAAAAEAAAADAAAAAgAAAAUAAAABAAAAAgAAAAIAAAABAAAABAAAAAQAAAAFAAAAAQAAAAEAAAACAAAAAwAAAAMAAAACAAAAAQAAAAIAAAACAAAAAgAAAAIAAAADAAAAAQAAAAEAAAABAAAAAgAAAAIAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAACAAAAAwAAAAIAAAACAAAAAQAAAAQAAAADAAAAAgAAAAcAAAABAAAAAQAAAAEAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAADAAAAAwAAAAIAAAAEAAAAAQAAAAEAAAACAAAAAgAAAAEAAAADAAAAAwAAAAIAAAABAAAAAgAAAAIAAAADAAAAAwAAAAIAAAADAAAAAgAAAAIAAAACAAAAAwAAAAIAAAADAAAABAAAAAIAAAADAAAAAwAAAAIAAAAEAAAABgAAAAIAAAADAAAAAgAAAAIAAAADAAAAAgAAAAIAAAABAAAAAgAAAAMAAAADAAAAAgAAAAEAAAAEAAAAAwAAAAIAAAACAAAAAgAAAAMAAAAEAAAAAwAAAAEAAAACAAAAAwAAAAIAAAABAAAAAQAAAAMAAAABAAAAAwAAAAMAAAAEAAAAAgAAAAMAAAADAAAAAgAAAAMAAAACAAAAAgAAAAIAAAABAAAAAgAAAAIAAAAEAAAAAQAAAAEAAAABAAAABAAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAABAAAAAwAAAAEAAAABAAAAAQAAAAMAAAADAAAAAgAAAAMAAAABAAAAAgAAAAMAAAABAAAAAwAAAAEAAAADAAAAAgAAAAIAAAAEAAAAAQAAAAIAAAACAAAAAQAAAAUAAAACAAAAAwAAAAMAAAABAAAAAgAAAAMAAAACAAAAAwAAAAIAAAABAAAAAwAAAAEAAAADAAAAAQAAAAMAAAACAAAAAgAAAAMAAAADAAAAAgAAAAIAAAACAAAAAQAAAAMAAAADAAAAAgAAAAMAAAACAAAAAgAAAAEAAAADAAAAAQAAAAMAAAABAAAAAwAAAAIAAAABAAAAAwAAAAMAAAABAAAAAwAAAAMAAAADAAAAAgAAAAIAAAACAAAABQAAAAIAAAACAAAAAgAAAAMAAAADAAAAAwAAAAEAAAACAAAAAgAAAAIAAAADAAAAAwAAAAIAAAAFAAAAAQAAAAEAAAACAAAAAgAAAA=="},"shape":[1483],"dtype":"int32","order":"little"}],["y",{"type":"ndarray","array":{"type":"bytes","data":"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"},"shape":[1483],"dtype":"int32","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1134","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1135"}}},"glyph":{"type":"object","name":"Scatter","id":"p1130","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":9},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.4},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.4},"hatch_alpha":{"type":"value","value":0.4}}},"nonselection_glyph":{"type":"object","name":"Scatter","id":"p1131","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":9},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Scatter","id":"p1132","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":9},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1102","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1115"},{"type":"object","name":"WheelZoomTool","id":"p1116","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1117","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1118","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1123"},{"type":"object","name":"ResetTool","id":"p1124"},{"type":"object","name":"HelpTool","id":"p1125"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1110","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1111","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1112"},"axis_label":"PR lifetime (hours)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1113"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1105","attributes":{"ticker":{"type":"object","name":"FixedTicker","id":"p1126","attributes":{"ticks":[1,2,3,4,5,6,7,8],"minor_ticks":[]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1107"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1108"}}}],"center":[{"type":"object","name":"Grid","id":"p1109","attributes":{"axis":{"id":"p1105"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1114","attributes":{"dimension":1,"axis":{"id":"p1110"}}}]}}]}};
+  const render_items = [{"docid":"72e31986-b409-4f23-ae62-0c19766695d6","roots":{"p1093":"c6446ed0-22e2-4f7c-99a8-08a90af7a7fd"},"root_ids":["p1093"]}];
+  void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+</section>
+<section id="where-contributions-come-from">
+<h3>Where contributions come from<a class="headerlink" href="#where-contributions-come-from" title="Link to this heading">#</a></h3>
+<p>There have been a total of <span class="pasted-text">1483</span>
+merged PRs<a class="footnote-reference brackets" href="#only-active" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> submitted by <span class="pasted-text">181</span>
+unique authors. <span class="pasted-text">99 (55%)</span> of these are “fly-by” PRs, i.e.
+PRs from users who have contributed to the project once (to-date).</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remap PRs by author</span>
+<span class="n">contributions_by_author</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">merged_prs</span><span class="p">:</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;author&quot;</span><span class="p">][</span><span class="s2">&quot;login&quot;</span><span class="p">]</span>
+    <span class="n">contributions_by_author</span><span class="p">[</span><span class="n">author</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pr</span><span class="p">)</span>
+
+<span class="n">num_merged_prs_per_author</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prs</span><span class="p">)</span> <span class="k">for</span> <span class="n">prs</span> <span class="ow">in</span> <span class="n">contributions_by_author</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<span class="p">)</span>
+
+<span class="n">num_flybys</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_num_merged_prs_with_known_authors&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">merged_prs</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_num_unique_authors_of_merged_prs&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">contributions_by_author</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_num_flyby&quot;</span><span class="p">,</span> <span class="n">percent_val</span><span class="p">(</span><span class="n">num_flybys</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Distribution of number of merged PRs per contributor&quot;</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;6 - 10&quot;</span><span class="p">,</span> <span class="s2">&quot;10 - 20&quot;</span><span class="p">,</span> <span class="s2">&quot;20 - 50&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt; 50&quot;</span><span class="p">]</span>
+<span class="n">bedges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span><span class="p">)])</span> <span class="o">+</span> <span class="mf">0.5</span>
+<span class="n">y</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bedges</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span>
+    <span class="n">x_range</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
+    <span class="n">y_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.05</span> <span class="o">*</span> <span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">670</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+    <span class="n">tooltips</span><span class="o">=</span><span class="p">[(</span><span class="sa">r</span><span class="s2">&quot;# PRs merged&quot;</span><span class="p">,</span> <span class="s2">&quot;@x&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;# contributors&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;@top&quot;</span><span class="p">)],</span>
+<span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">vbar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;# Merged PRs per user&quot;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s2">&quot;# of unique contributors with N PRs merged&quot;</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="ec1dc58d-a130-44d3-8a1d-785dc10024c3" data-root-id="p1138" style="display: contents;"></div>
+</div><script type="application/javascript">(function(root) {
+  function embed_document(root) {
+  const docs_json = {"086f42b6-a25a-44e9-bcdb-58011eff1bb1":{"version":"3.4.1","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1138","attributes":{"width":670,"height":400,"x_range":{"type":"object","name":"FactorRange","id":"p1148","attributes":{"factors":["1","2","3","4","5","6 - 10","10 - 20","20 - 50","> 50"]}},"y_range":{"type":"object","name":"Range1d","id":"p1149","attributes":{"end":103.95}},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1150"},"y_scale":{"type":"object","name":"LinearScale","id":"p1151"},"title":{"type":"object","name":"Title","id":"p1141","attributes":{"text":"Distribution of number of merged PRs per contributor"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1180","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1174","attributes":{"selected":{"type":"object","name":"Selection","id":"p1175","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1176"},"data":{"type":"map","entries":[["x",["1","2","3","4","5","6 - 10","10 - 20","20 - 50","> 50"]],["top",{"type":"ndarray","array":{"type":"bytes","data":"YwAAABcAAAAKAAAABgAAAAYAAAASAAAACAAAAAgAAAADAAAA"},"shape":[9],"dtype":"int32","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1181","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1182"}}},"glyph":{"type":"object","name":"VBar","id":"p1177","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.8},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"fill_color":{"type":"value","value":"#1f77b4"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1178","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.8},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.1},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1179","attributes":{"x":{"type":"field","field":"x"},"width":{"type":"value","value":0.8},"top":{"type":"field","field":"top"},"line_color":{"type":"value","value":"#1f77b4"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#1f77b4"},"fill_alpha":{"type":"value","value":0.2},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1147","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1162"},{"type":"object","name":"WheelZoomTool","id":"p1163","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1164","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1165","attributes":{"syncable":false,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"SaveTool","id":"p1170"},{"type":"object","name":"ResetTool","id":"p1171"},{"type":"object","name":"HelpTool","id":"p1172"},{"type":"object","name":"HoverTool","id":"p1173","attributes":{"renderers":"auto","tooltips":[["# PRs merged","@x"],["# contributors","@top"]]}}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1157","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1158","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1159"},"axis_label":"# of unique contributors with N PRs merged","major_label_policy":{"type":"object","name":"AllLabels","id":"p1160"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1152","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1153"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1154"},"axis_label":"# Merged PRs per user","major_label_policy":{"type":"object","name":"AllLabels","id":"p1155"}}}],"center":[{"type":"object","name":"Grid","id":"p1156","attributes":{"axis":{"id":"p1152"}}},{"type":"object","name":"Grid","id":"p1161","attributes":{"dimension":1,"axis":{"id":"p1157"}}}]}}]}};
+  const render_items = [{"docid":"086f42b6-a25a-44e9-bcdb-58011eff1bb1","roots":{"p1138":"ec1dc58d-a130-44d3-8a1d-785dc10024c3"},"root_ids":["p1138"]}];
+  void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
+  }
+  if (root.Bokeh !== undefined) {
+    embed_document(root);
+  } else {
+    let attempts = 0;
+    const timer = setInterval(function(root) {
+      if (root.Bokeh !== undefined) {
+        clearInterval(timer);
+        embed_document(root);
+      } else {
+        attempts++;
+        if (attempts > 100) {
+          clearInterval(timer);
+          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+        }
+      }
+    }, 10, root)
+  }
+})(window);</script></div>
+</div>
+<section id="pony-factor">
+<h4>Pony factor<a class="headerlink" href="#pony-factor" title="Link to this heading">#</a></h4>
+<p>Another way to look at these data is in terms of the
+<a class="reference external" href="https://ke4qqq.wordpress.com/2015/02/08/pony-factor-math/">pony factor</a>,
+described as:</p>
+<blockquote>
+<div><p>The minimum number of contributors whose total contribution constitutes a
+majority of the contributions.</p>
+</div></blockquote>
+<p>For this analysis, we will consider merged PRs as the metric for contribution.
+Considering all merged PRs over the lifetime of the project, the pony factor
+is: <span class="pasted-text">4</span>.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sort by number of merged PRs in descending order</span>
+<span class="n">num_merged_prs_per_author</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">num_merged_prs_per_author</span> <span class="o">=</span> <span class="n">num_merged_prs_per_author</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">num_merged_prs</span> <span class="o">=</span> <span class="n">num_merged_prs_per_author</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">pf_thresh</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">pony_factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span><span class="p">),</span> <span class="n">num_merged_prs</span> <span class="o">*</span> <span class="n">pf_thresh</span>
+<span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">num_merged_prs_per_author</span><span class="p">),</span>
+    <span class="s2">&quot;.&quot;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;How the pony factor is calculated&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;# unique contributors&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Cumulative sum of merged PRs / contributor&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span>
+    <span class="n">xmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">xmax</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">contributions_by_author</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">num_merged_prs</span> <span class="o">*</span> <span class="n">pf_thresh</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:green&quot;</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Pony factor threshold = </span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pf_thresh</span><span class="si">:</span><span class="s2">1.0f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;astroquery_pony_factor&quot;</span><span class="p">,</span> <span class="n">pony_factor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../../_images/0b1fcb26c446dbb290cff499a504a95ef3c440c765360fa35e2ddc9351fbd58b.png" src="../../_images/0b1fcb26c446dbb290cff499a504a95ef3c440c765360fa35e2ddc9351fbd58b.png" />
+</div>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="only-active" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>This only includes PRs from users with an active GitHub account.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issues">Issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-issues">New issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-response">Time to response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first-responders">First responders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull Requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merged-prs-over-time">Merged PRs over time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pr-lifetime">PR lifetime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mergeability-of-open-prs">Mergeability of Open PRs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-pr-participants">Number of PR participants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-contributions-come-from">Where contributions come from</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pony-factor">Pony factor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/_generated/astroquery/index.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2022--2024, Scientific Python community.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
